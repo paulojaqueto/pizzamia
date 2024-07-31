@@ -1,0 +1,533 @@
+/* Estilo global e navegação */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 100px;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo a h1 {
+  flex: 1;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+.logo a h1 span {
+  color: forestgreen;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+}
+
+ul {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  list-style: none;
+}
+
+#nav-links.active {
+  display: flex;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-entrar {
+  background: transparent;
+  color: #ff0000;
+}
+
+.btn-entrar:hover {
+  color: #e90303;
+}
+
+.btn-criar-conta {
+  background: #ff0000;
+  color: white;
+}
+
+.btn-criar-conta:hover {
+  background-color: #e90303;
+}
+
+/* Configuração para telas grandes */
+@media (min-width: 1000px) {
+  nav {
+    padding: 20px 100px;
+  }
+
+  .logo a h1 {
+    font-size: 30px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  #nav-links {
+    display: flex;
+    gap: 50px;
+  }
+
+  .hamburger {
+    display: none; /* Oculta o menu hambúrguer em telas grandes */
+  }
+}
+
+/* Configuração para telas menores que 1000px */
+@media (max-width: 999px) {
+  nav {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .logo a h1 {
+    font-size: 21px; /* Ajustado para telas menores */
+  }
+
+  .nav-buttons {
+    gap: 14px; /* Ajustado para telas menores */
+    margin-right: 14px; /* Ajustado para telas menores */
+  }
+
+  .btn {
+    font-size: 16.8px; /* Ajustado para telas menores */
+    padding: 7px 14px; /* Ajustado para telas menores */
+  }
+
+  #nav-links {
+    display: none; /* Oculta os links de navegação em telas menores */
+  }
+
+  .hamburger {
+    display: block; /* Exibe o menu hambúrguer em telas menores */
+  }
+
+  #nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fddc64;
+    width: 50%; /* Ocupa metade da largura da tela */
+    height: auto; /* Ajustado para altura automática */
+    box-sizing: border-box;
+    z-index: 10;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #nav-links a {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px 0; /* Ajuste para espaçamento mínimo */
+  }
+
+  .nav-buttons {
+    flex-direction: row;
+    gap: 5px;
+    margin-right: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/*hero image*/
+.hero {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Nova Seção */
+.delicias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+  gap: 20px;
+}
+
+.texto {
+  flex: 0 1 35%;
+  margin-left: 10%;
+}
+
+.texto h3 {
+  font-size: 24px;
+  color: #ff0000;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+.texto p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem img {
+  width: 80%;
+  height: auto;
+}
+
+/* Responsividade para telas menores que 850px */
+@media (max-width: 850px) {
+  .delicias {
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens na coluna */
+    padding: 20px;
+  }
+
+  .texto {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px;
+  }
+
+  .texto h3 {
+    text-align: center; /* Centraliza o texto do título e parágrafo */
+    margin: 0 auto; /* Remove margem lateral */
+    margin-bottom: 10px;
+  }
+
+  .texto p {
+    text-align: center; /* Centraliza o texto do título e parágrafo */
+    margin: 0 auto; /* Remove margem lateral */
+  }
+
+  .imagem {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imagem img {
+    width: 90%;
+  }
+}
+
+/* Delivery */
+.delivery {
+  display: flex;
+  flex-direction: column; /* Alinha conteúdo em coluna */
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Remove height fixa e usa padding */
+}
+
+.delivery img {
+  width: 75%; /* Aumenta a largura da imagem em 25% */
+  height: auto; /* Mantém a proporção da imagem */
+  cursor: pointer;
+}
+
+.delivery-link {
+  margin-bottom: 26px; /* Espaçamento entre o link e a imagem */
+}
+
+.delivery-link h3 a {
+  font-size: 28px;
+  font-weight: bolder;
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .delivery img {
+    width: 100%; /* Ajuste conforme necessário para tablets */
+  }
+  .delivery-link h3 a {
+    font-size: 18px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  .delivery img {
+    width: 100%; /* Ajuste conforme necessário para celulares */
+    margin-bottom: 10px; /* Reduz o espaçamento abaixo da imagem */
+  }
+  .delivery-link h3 a {
+    font-size: 14px;
+  }
+}
+
+/*Baixe o App*/
+.app-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  margin: 0 20%; /* Margem para centralizar a seção */
+}
+
+/* Ajuste da margem superior da seção em telas menores */
+@media (max-width: 480px) {
+  .app-section {
+    margin-top: 10px; /* Reduz a margem superior em telas de celulares */
+  }
+}
+
+.app-text {
+  flex: 1;
+  margin-right: 200px;
+  text-align: left;
+}
+
+.app-text h3 {
+  font-size: 24px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.app-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.app-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.app-buttons img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .app-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 5%; /* Ajuste das margens para telas menores */
+  }
+
+  .app-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  .app-text {
+    text-align: center; /* Alinhar o texto ao centro em celulares */
+  }
+
+  .app-text h3 {
+    font-size: 20px;
+  }
+
+  .app-text p {
+    font-size: 16px;
+  }
+
+  .app-buttons img {
+    width: 90%;
+  }
+}
+
+/*footer*/
+footer {
+  background-color: #fddc64;
+  color: black;
+  padding: 40px 0; /* Reduzido padding para um espaçamento mais compacto */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Muda a direção do layout para coluna */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  width: 100%;
+  margin: 10px 0; /* Reduzido o espaçamento vertical entre seções */
+  text-align: center; /* Centraliza o texto nas seções */
+}
+
+.footer-section h3 {
+  font-size: 24px; /* Ajustado para um tamanho de fonte menor */
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens da lista */
+}
+
+.footer-section ul li {
+  margin-bottom: 5px; /* Reduzido o espaçamento entre os itens da lista */
+}
+
+.footer-section ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column; /* Muda a direção para coluna */
+  align-items: center; /* Centraliza o formulário */
+  margin-top: 20px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px; /* Limita a largura do campo de email */
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff0000;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px; /* Limita a largura do botão */
+}
+
+.newsletter-form button:hover {
+  background-color: #c0392b;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones das redes sociais */
+  margin-top: 20px;
+}
+
+.social-media a {
+  font-size: 40px; /* Ajustado para um tamanho menor */
+  margin: 0 10px; /* Reduzido o espaçamento entre ícones */
+}
+
+.social-media .fa-facebook-square {
+  color: #3b5998;
+}
+
+.social-media .fa-instagram-square {
+  color: #ea4c89;
+}
+
+.social-media .fa-twitter-square {
+  color: #00acee;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 20px; /* Ajuste do padding para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 20px; /* Ajustado o tamanho da fonte para telas menores */
+  }
+
+  .footer-section ul li a {
+    font-size: 14px; /* Ajustado o tamanho da fonte dos links */
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .social-media a {
+    font-size: 30px; /* Ajustado o tamanho dos ícones para telas menores */
+  }
+}

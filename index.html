@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Pizza Mia</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <h1>Pizza<span>Mia</span></h1>
+        </a>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="promos.html">Promos</a></li>
+        <li><a href="monte.html">Monte a sua</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="#" class="btn btn-entrar">Entrar</a>
+        <a href="#" class="btn btn-criar-conta">Criar Conta</a>
+      </div>
+      <button id="menu-hamburger" class="hamburger">☰</button>
+    </nav>
+
+    <div class="hero">
+      <img src="./hero-pizza.png" alt="Hero Image" />
+    </div>
+
+    <!-- Nova Seção -->
+    <section class="delicias">
+      <div class="texto">
+        <h3>EXPERIMENTE NOSSAS DELÍCIAS</h3>
+        <p>
+          A melhor pizzaria da cidade. Venha experimentar nossas deliciosas
+          pizzas e aproveite a promoção: de 2ª a 6ª feira, refrigerante grátis!
+        </p>
+      </div>
+      <div class="imagem">
+        <img src="coca-cola.gif" alt="Imagem Pizza" />
+      </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <div class="delivery">
+      <div class="delivery-link">
+        <h3><a href="cardapio.html">ACESSE AQUI NOSSOS SABORES</a></h3>
+      </div>
+      <img src="./QR.png" alt="Imagem Delivery" />
+    </div>
+
+    <!--Baixe o App -->
+    <section class="app-section">
+      <div class="app-text">
+        <h3>Já baixou nosso app?</h3>
+        <p>
+          Baixe agora lendo o QR code ao lado e tenha acesso a preços e
+          promoções exclusivas.
+        </p>
+      </div>
+      <div class="app-buttons">
+        <a href="#">
+          <img src="./apple_google.png" alt="" style="width: 200px" />
+        </a>
+      </div>
+    </section>
+    <!--Baixe o App-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("menu-hamburger")
+          .addEventListener("click", function () {
+            document.getElementById("nav-links").classList.toggle("active");
+          });
+      });
+    </script>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>SOBRE A PIZZARIA</h3>
+          <ul>
+            <li><a href="">Nossa História</a></li>
+            <li><a href="">Seja um Franqueado</a></li>
+            <li><a href="">Fale Conosco</a></li>
+            <li><a href="">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Envie seu e-mail</h3>
+          <form
+            class="newsletter-form"
+            id="contact-form"
+            action="https://formsubmit.co/paulgoku41@gmail.com"
+            method="POST"
+            onsubmit="showThankYouMessage(event)"
+          >
+            <!-- Campos escondidos -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Novo contato do site!"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://formsubmit.co/paulgoku41@gmail.com"
+            />
+
+            <input type="email" name="email" placeholder="e-mail" required />
+            <button type="submit">CONTATO</button>
+          </form>
+
+          <div
+            id="thank-you-message"
+            style="display: none; text-align: start; margin-top: 20px"
+          >
+            <h2>Obrigado pelo seu contato!</h2>
+            <p>
+              Seu e-mail foi enviado com sucesso. <br />
+              Entrarei em contato em breve.
+            </p>
+          </div>
+
+          <div class="social-media">
+            <a href="https://www.facebook.com/paulo.marchi.5283" target="_blank"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram-square"></i
+            ></a>
+            <a href="https://twitter.com" target="_blank"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

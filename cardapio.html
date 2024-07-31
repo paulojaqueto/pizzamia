@@ -1,0 +1,515 @@
+<!--produtos (pizzas) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Pizza Mia</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <h1>Pizza<span>Mia</span></h1>
+        </a>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="promos.html">Promos</a></li>
+        <li><a href="monte.html">Monte a sua</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="#" class="btn btn-entrar">Entrar</a>
+        <a href="#" class="btn btn-criar-conta">Criar Conta</a>
+      </div>
+      <button id="menu-hamburger" class="hamburger">☰</button>
+    </nav>
+
+    <div class="container">
+      <div class="produtos">
+        <h2>Descubra Nossos Sabores</h2>
+        <div class="carousel-container">
+          <button class="prev">&#10094;</button>
+          <div class="carousel">
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 1" />
+              <h2>4 QUEIJOS</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 2" />
+              <h2>ATUM</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 3" />
+              <h2>CALABRESA</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 4" />
+              <h2>FRANGO</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 5" />
+              <h2>MILHO E BACON</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 6" />
+              <h2>MUSSARELA</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 6" />
+              <h2>PEPPERONI</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 6" />
+              <h2>MARGUERITA</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+            <div class="carousel-item">
+              <img src="./monte.png" alt="Produto 6" />
+              <h2>MONTE A SUA</h2>
+              <p>Molho de tomate, pepperoni, cebola</p>
+              <p>R$60,00</p>
+              <button>ADICIONAR</button>
+            </div>
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      nav {
+        display: flex;
+        align-items: center;
+        padding: 20px 100px;
+        background-color: #fddc64;
+        position: relative;
+        z-index: 10;
+      }
+
+      .logo a h1 {
+        flex: 1;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #ff0000;
+      }
+
+      .logo a h1 span {
+        color: forestgreen;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bolder;
+      }
+
+      ul {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #555;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 1px;
+      }
+
+      .hamburger {
+        background: none;
+        border: none;
+        color: #555;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+      }
+
+      #nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        list-style: none;
+      }
+
+      #nav-links.active {
+        display: flex;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .btn-entrar {
+        background: transparent;
+        color: #ff0000;
+      }
+
+      .btn-entrar:hover {
+        color: #e90303;
+      }
+
+      .btn-criar-conta {
+        background: #ff0000;
+        color: white;
+      }
+
+      .btn-criar-conta:hover {
+        background-color: #e90303;
+      }
+
+      /* Configuração para telas grandes */
+      @media (min-width: 1000px) {
+        nav {
+          padding: 20px 100px;
+        }
+
+        .logo a h1 {
+          font-size: 30px;
+        }
+
+        .nav-buttons {
+          display: flex;
+          gap: 20px;
+        }
+
+        #nav-links {
+          display: flex;
+          gap: 50px;
+        }
+
+        .hamburger {
+          display: none; /* Oculta o menu hambúrguer em telas grandes */
+        }
+      }
+
+      /* Configuração para telas menores que 1000px */
+      @media (max-width: 999px) {
+        nav {
+          padding: 10px 20px;
+          justify-content: space-between;
+        }
+
+        .logo a h1 {
+          font-size: 21px; /* Ajustado para telas menores */
+        }
+
+        .nav-buttons {
+          gap: 14px; /* Ajustado para telas menores */
+          margin-right: 14px; /* Ajustado para telas menores */
+        }
+
+        .btn {
+          font-size: 16.8px; /* Ajustado para telas menores */
+          padding: 7px 14px; /* Ajustado para telas menores */
+        }
+
+        #nav-links {
+          display: none; /* Oculta os links de navegação em telas menores */
+        }
+
+        .hamburger {
+          display: block; /* Exibe o menu hambúrguer em telas menores */
+        }
+
+        #nav-links.active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background-color: #fddc64;
+          width: 50%; /* Ocupa metade da largura da tela */
+          height: auto; /* Ajustado para altura automática */
+          box-sizing: border-box;
+          z-index: 10;
+          text-align: center;
+          padding: 10px;
+          margin: 0;
+        }
+
+        #nav-links a {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 3px 0; /* Ajuste para espaçamento mínimo */
+        }
+
+        .nav-buttons {
+          flex-direction: row;
+          gap: 5px;
+          margin-right: 10px;
+        }
+
+        .btn {
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+      }
+
+      .produtos h2 {
+        font-size: 34px;
+        margin-bottom: 10px;
+      }
+
+      .produtos {
+        margin: 50px auto;
+        text-align: center;
+        width: 80%;
+      }
+
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+      }
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-width: 33%; /* 3 items visible at a time */
+        box-sizing: border-box;
+        padding: 40px 20px;
+      }
+
+      .carousel-item img {
+        width: 60%; /* Diminuir o tamanho da imagem */
+        height: auto;
+        display: block;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .carousel-item h2 {
+        color: #ff0000;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .carousel-item p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .carousel-item button {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 15px 30px;
+        margin-top: 10px;
+        color: #fff;
+        background-color: #ff0000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .carousel-item button:hover {
+        background-color: #e90303;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-item {
+          min-width: 100%; /* 1 item visible at a time */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .carousel-item {
+          min-width: 100%; /* 1 item visible at a time */
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        const items = document.querySelectorAll(".carousel-item");
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+
+        let index = 0;
+
+        function updateCarousel() {
+          const width = items[0].clientWidth;
+          carousel.style.transform = `translateX(${-index * width}px)`;
+        }
+
+        function showPrev() {
+          index = index > 0 ? index - 1 : items.length - 1;
+          updateCarousel();
+        }
+
+        function showNext() {
+          index = index < items.length - 1 ? index + 1 : 0;
+          updateCarousel();
+        }
+
+        prev.addEventListener("click", showPrev);
+        next.addEventListener("click", showNext);
+
+        // Initial adjustment
+        updateCarousel();
+
+        // Adjust carousel on window resize
+        window.addEventListener("resize", updateCarousel);
+      });
+    </script>
+
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("menu-hamburger")
+          .addEventListener("click", function () {
+            document.getElementById("nav-links").classList.toggle("active");
+          });
+      });
+    </script>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>SOBRE A PIZZARIA</h3>
+          <ul>
+            <li><a href="">Nossa História</a></li>
+            <li><a href="">Seja um Franqueado</a></li>
+            <li><a href="">Fale Conosco</a></li>
+            <li><a href="">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Envie seu e-mail</h3>
+          <form
+            class="newsletter-form"
+            id="contact-form"
+            action="https://formsubmit.co/paulgoku41@gmail.com"
+            method="POST"
+            onsubmit="showThankYouMessage(event)"
+          >
+            <!-- Campos escondidos -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Novo contato do site!"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://formsubmit.co/paulgoku41@gmail.com"
+            />
+
+            <input type="email" name="email" placeholder="e-mail" required />
+            <button type="submit">CONTATO</button>
+          </form>
+
+          <div
+            id="thank-you-message"
+            style="display: none; text-align: start; margin-top: 20px"
+          >
+            <h2>Obrigado pelo seu contato!</h2>
+            <p>
+              Seu e-mail foi enviado com sucesso. <br />
+              Entrarei em contato em breve.
+            </p>
+          </div>
+
+          <div class="social-media">
+            <a href="https://www.facebook.com/paulo.marchi.5283" target="_blank"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram-square"></i
+            ></a>
+            <a href="https://twitter.com" target="_blank"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
